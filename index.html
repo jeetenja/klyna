@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klyna Engineering and Trading Pvt. Ltd. — Commercial Construction, Design &amp; Sourcing</title>
+<meta name="description" content="Klyna Engineering and Trading Private Limited — commercial construction, design and development, and India-wide materials sourcing. Chennai &amp; Bangalore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F3EE;
+    --paper-2:#EFEBE2;
+    --ink:#17181A;
+    --ink-soft:#4A4C50;
+    --line:#C9C4B8;
+    --blueprint:#1F3A52;
+    --blueprint-tint:#E4EBF0;
+    --safety:#D2571A;
+    --safety-ink:#FFFFFF;
+    --radius:2px;
+    --maxw:1180px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#14161A;
+      --paper-2:#1B1E24;
+      --ink:#F0EEE7;
+      --ink-soft:#B7BAC0;
+      --line:#33373E;
+      --blueprint:#7FA6C9;
+      --blueprint-tint:#1E2A35;
+      --safety:#E06A2C;
+      --safety-ink:#14161A;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:800;line-height:1.08;margin:0;letter-spacing:-0.01em;}
+  p{max-width:62ch;color:var(--ink-soft);margin:0;}
+  :focus-visible{outline:2px solid var(--safety);outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}
+  }
+
+  /* ---------- nav ---------- */
+  header.site{
+    position:sticky;top:0;z-index:40;
+    background:color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:var(--maxw);margin:0 auto;}
+  .wordmark{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:0.01em;text-decoration:none;color:var(--ink);}
+  .wordmark span{color:var(--safety);}
+  nav.links{display:flex;gap:28px;}
+  nav.links a{font-size:0.92rem;font-weight:500;text-decoration:none;color:var(--ink-soft);}
+  nav.links a:hover{color:var(--ink);}
+  .nav-cta{font-size:0.88rem;font-weight:600;text-decoration:none;color:var(--paper);background:var(--blueprint);padding:9px 16px;border-radius:var(--radius);}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius);padding:8px 10px;color:var(--ink);}
+  @media (max-width:780px){
+    nav.links{display:none;}
+    .menu-btn{display:block;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    border-bottom:1px solid var(--line);
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:40px 40px;
+    background-position:center top;
+    opacity:1;
+  }
+  .hero-inner{
+    max-width:var(--maxw);margin:0 auto;padding:96px 28px 64px;
+    background:linear-gradient(180deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 88%, transparent) 60%, var(--paper) 100%);
+    position:relative;
+  }
+  .crop{position:absolute;width:18px;height:18px;border-color:var(--ink-soft);}
+  .crop.tl{top:0;left:0;border-top:1px solid;border-left:1px solid;}
+  .crop.tr{top:0;right:0;border-top:1px solid;border-right:1px solid;}
+  .crop.bl{bottom:0;left:0;border-bottom:1px solid;border-left:1px solid;}
+  .crop.br{bottom:0;right:0;border-bottom:1px solid;border-right:1px solid;}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:0.82rem;font-weight:600;color:var(--blueprint);
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:5px 10px;margin-bottom:22px;
+  }
+  .hero-tag b{color:var(--safety);}
+  h1.hero-h{font-size:clamp(2.2rem, 5.4vw, 3.6rem);max-width:14ch;}
+  .hero-sub{margin-top:20px;font-size:1.15rem;max-width:44ch;}
+  .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+  .btn{
+    font-weight:600;font-size:0.95rem;text-decoration:none;
+    padding:13px 22px;border-radius:var(--radius);
+    display:inline-block;
+  }
+  .btn-primary{background:var(--safety);color:var(--safety-ink);}
+  .btn-outline{border:1px solid var(--ink);color:var(--ink);}
+  .btn:hover{opacity:0.88;}
+
+  /* ---------- process strip ---------- */
+  .process{border-bottom:1px solid var(--line);background:var(--paper-2);}
+  .process-inner{max-width:var(--maxw);margin:0 auto;padding:44px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
+  .step{position:relative;padding:0 20px 0 0;border-right:1px solid var(--line);}
+  .step:last-child{border-right:none;}
+  .step-num{font-family:'Archivo',sans-serif;font-weight:800;font-size:0.8rem;color:var(--blueprint);margin-bottom:8px;}
+  .step h3{font-size:1.15rem;margin-bottom:6px;}
+  .step p{font-size:0.92rem;}
+  @media (max-width:780px){
+    .process-inner{grid-template-columns:1fr;gap:26px;}
+    .step{border-right:none;border-bottom:1px solid var(--line);padding:0 0 22px 0;}
+    .step:last-child{border-bottom:none;padding-bottom:0;}
+  }
+
+  /* ---------- section shell ---------- */
+  section{padding:80px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.2rem);max-width:16ch;}
+  .section-num{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.85rem;color:var(--ink-soft);border-left:2px solid var(--safety);padding-left:10px;white-space:nowrap;}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .about-grid p{font-size:1.05rem;max-width:60ch;}
+  .founder{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);}
+  .founder-name{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;}
+  .founder-role{color:var(--ink-soft);font-size:0.92rem;margin-top:2px;}
+  .spec-list{list-style:none;margin:0;padding:0;font-size:0.95rem;}
+  .spec-list li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);}
+  .spec-list li:first-child{padding-top:0;}
+  .spec-list dt{color:var(--ink-soft);}
+  .spec-list dd{margin:0;font-weight:600;text-align:right;}
+
+  /* ---------- services ---------- */
+  .service-rows{border-top:1px solid var(--line);}
+  .service-row{
+    display:grid;grid-template-columns:64px 1fr 1.4fr;gap:24px;
+    padding:26px 0;border-bottom:1px solid var(--line);align-items:start;
+  }
+  .service-row .idx{font-family:'Archivo',sans-serif;font-weight:800;font-size:1rem;color:var(--blueprint);}
+  .service-row h3{font-size:1.12rem;}
+  .service-row p{font-size:0.95rem;margin-top:6px;}
+  @media (max-width:700px){
+    .service-row{grid-template-columns:36px 1fr;}
+    .service-row p{grid-column:1 / -1;margin-top:8px;}
+  }
+
+  /* ---------- portfolio ---------- */
+  .portfolio{background:var(--blueprint-tint);}
+  .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  .proj{background:var(--paper);padding:32px;}
+  @media (max-width:780px){.proj-grid{grid-template-columns:1fr;}}
+  .proj-status{
+    display:inline-block;font-size:0.75rem;font-weight:700;
+    padding:4px 9px;border-radius:var(--radius);margin-bottom:16px;
+  }
+  .proj-status.done{background:var(--blueprint);color:var(--paper);}
+  .proj-status.live{background:var(--safety);color:var(--safety-ink);}
+  .proj h3{font-size:1.3rem;margin-bottom:14px;}
+  .proj dl{margin:0;font-size:0.9rem;}
+  .proj dl div{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid var(--line);}
+  .proj dl div:first-of-type{border-top:none;}
+  .proj dt{color:var(--ink-soft);}
+  .proj dd{margin:0;font-weight:600;text-align:right;}
+
+  /* ---------- why ---------- */
+  .why-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .why-list li{background:var(--paper);padding:26px;font-size:0.98rem;font-weight:500;}
+  @media (max-width:700px){.why-list{grid-template-columns:1fr;}}
+
+  /* ---------- locations ---------- */
+  .loc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .loc{background:var(--paper);padding:28px;}
+  .loc-tag{font-size:0.78rem;font-weight:700;color:var(--blueprint);margin-bottom:8px;}
+  .loc h3{font-size:1.1rem;margin-bottom:4px;}
+  .loc p{font-size:0.9rem;}
+  @media (max-width:780px){.loc-grid{grid-template-columns:1fr;}}
+
+  /* ---------- contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-info dl{margin:26px 0 0;font-size:0.98rem;}
+  .contact-info dl div{padding:14px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;}
+  .contact-info dl div:first-of-type{border-top:none;}
+  .contact-info dt{color:var(--ink-soft);}
+  form{display:flex;flex-direction:column;gap:14px;}
+  label{font-size:0.85rem;font-weight:600;color:var(--ink-soft);}
+  input,textarea{
+    font-family:inherit;font-size:0.98rem;color:var(--ink);
+    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+    padding:11px 12px;width:100%;
+  }
+  textarea{min-height:110px;resize:vertical;}
+  input:focus,textarea:focus{border-color:var(--blueprint);}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .btn-submit{
+    align-self:flex-start;background:var(--ink);color:var(--paper);
+    border:none;font-weight:600;font-size:0.95rem;padding:13px 24px;
+    border-radius:var(--radius);cursor:pointer;margin-top:6px;
+  }
+  .btn-submit:hover{opacity:0.88;}
+
+  /* ---------- footer ---------- */
+  footer{padding:36px 0;}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  .footer-inner p{font-size:0.85rem;color:var(--ink-soft);}
+  .footer-links{display:flex;gap:20px;}
+  .footer-links a{font-size:0.85rem;color:var(--ink-soft);text-decoration:none;}
+  .footer-links a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="wordmark" href="#top">KLYNA<span>.</span></a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Get a Quote</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-inner">
+      <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+      <div class="hero-tag">Klyna Engineering and Trading Pvt. Ltd. <b>·</b> Est. 2024</div>
+      <h1 class="hero-h">Design. Build. Source.<br>Construction Done Right.</h1>
+      <p class="hero-sub">A commercial construction company headquartered in Chennai, with a branch in Bangalore — delivering design, development, and construction, plus an India-wide network for materials trading and sourcing.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">Get a Quote</a>
+        <a class="btn btn-outline" href="#projects">View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" aria-label="Our process">
+    <div class="process-inner">
+      <div class="step">
+        <div class="step-num">01 — DESIGN</div>
+        <h3>Concept to blueprint</h3>
+        <p>In-house design and development, shaping commercial projects from first concept through buildable plans.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02 — BUILD</div>
+        <h3>Ground-up construction</h3>
+        <p>Full-service commercial construction, from ground-up builds to fit-outs, managed start to finish.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03 — SOURCE</div>
+        <h3>India-wide materials</h3>
+        <p>A trading, supply, and sourcing network for construction materials, reaching clients across India.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-label="About Klyna">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Built on-site experience, not just paperwork.</h2>
+        <div class="section-num">ABOUT</div>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>Founded in 2024, Klyna Engineering and Trading Private Limited is a commercial construction company headquartered in Chennai, with a branch office in Bangalore. We deliver end-to-end commercial property projects — from design and development through construction — and operate an India-wide trading, supply, and sourcing network for construction materials.</p>
+          <div class="founder">
+            <div class="founder-name">Dinesh Jayshwal</div>
+            <div class="founder-role">Founder — 7 years of experience in commercial construction</div>
+          </div>
+        </div>
+        <dl class="spec-list">
+          <li><dt>Founded</dt><dd>2024</dd></li>
+          <li><dt>Registered office</dt><dd>Chennai, India</dd></li>
+          <li><dt>Branch office</dt><dd>Bangalore, India</dd></li>
+          <li><dt>Materials network</dt><dd>India</dd></li>
+          <li><dt>Core capability</dt><dd>Design, build, source</dd></li>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" aria-label="Services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we do</h2>
+        <div class="section-num">SERVICES</div>
+      </div>
+      <div class="service-rows">
+        <div class="service-row">
+          <div class="idx">01</div>
+          <h3>Commercial Construction</h3>
+          <p>Full-service construction of commercial properties, from ground-up builds to interior fit-outs, managed on-site by our own teams.</p>
+        </div>
+        <div class="service-row">
+          <div class="idx">02</div>
+          <h3>Design &amp; Development</h3>
+          <p>In-house design and development capability, taking commercial projects from initial concept through to completed structure.</p>
+        </div>
+        <div class="service-row">
+          <div class="idx">03</div>
+          <h3>Materials Trading &amp; Sourcing</h3>
+          <p>Sourcing, trading, and supply of construction materials for builders and developers, with reach across India.</p>
+        </div>
+        <div class="service-row">
+          <div class="idx">04</div>
+          <h3>Construction Services</h3>
+          <p>Additional construction-related services delivered nationwide, supporting projects beyond our own builds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="portfolio" aria-label="Featured projects">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <div class="section-num">PROJECTS</div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj">
+          <span class="proj-status done">Completed</span>
+          <h3>Foxconn Facility, Bangalore</h3>
+          <dl>
+            <div><dt>Client</dt><dd>Foxconn</dd></div>
+            <div><dt>Location</dt><dd>Bangalore, India</dd></div>
+            <div><dt>Scope</dt><dd>Facility construction</dd></div>
+          </dl>
+        </div>
+        <div class="proj">
+          <span class="proj-status live">Ongoing</span>
+          <h3>Godrej Residential Apartments</h3>
+          <dl>
+            <div><dt>Client</dt><dd>Godrej</dd></div>
+            <div><dt>Location</dt><dd>India</dd></div>
+            <div><dt>Scope</dt><dd>Residential apartment construction</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Why Klyna">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Why Klyna</h2>
+        <div class="section-num">WHY US</div>
+      </div>
+      <ul class="why-list">
+        <li>Founder-led, with 7 years of hands-on experience in commercial construction</li>
+        <li>End-to-end capability across design, development, and construction</li>
+        <li>Trusted by major names, including Foxconn and Godrej</li>
+        <li>India trading and sourcing network for materials</li>
+        <li>Registered office in Chennai, branch office in Bangalore</li>
+        <li>Founded in 2024, built for long-term commercial partnerships</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-label="Locations">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Where we work</h2>
+        <div class="section-num">LOCATIONS</div>
+      </div>
+      <div class="loc-grid">
+        <div class="loc">
+          <div class="loc-tag">REGISTERED OFFICE</div>
+          <h3>Chennai</h3>
+          <p>Tamil Nadu, India</p>
+        </div>
+        <div class="loc">
+          <div class="loc-tag">BRANCH OFFICE</div>
+          <h3>Bangalore</h3>
+          <p>Karnataka, India</p>
+        </div>
+        <div class="loc">
+          <div class="loc-tag">MATERIALS &amp; SERVICES</div>
+          <h3>India</h3>
+          <p>Sourcing and supply nationwide</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-label="Contact">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Let's talk about your project</h2>
+        <div class="section-num">CONTACT</div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>Reach out for a quote, a project discussion, or a materials sourcing enquiry — we usually reply within one business day.</p>
+          <dl>
+            <div><dt>Email</dt><dd>info@klynaengineering.com</dd></div>
+            <div><dt>Phone</dt><dd>+91 91482 15541</dd></div>
+            <div><dt>Chennai</dt><dd>Registered office</dd></div>
+            <div><dt>Bangalore</dt><dd>Branch office</dd></div>
+          </dl>
+        </div>
+        <form id="contact-form" action="https://formspree.io/f/xzezralj" method="POST">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button class="btn-submit" type="submit">Send Enquiry</button>
+          <p id="form-status" role="status" style="display:none;margin-top:4px;font-size:0.9rem;"></p>
+        </form>
+        <script>
+          (function(){
+            var form = document.getElementById('contact-form');
+            var status = document.getElementById('form-status');
+            form.addEventListener('submit', function(e){
+              e.preventDefault();
+              var data = new FormData(form);
+              fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+              }).then(function(response){
+                if(response.ok){
+                  form.reset();
+                  status.textContent = "Thanks — we'll get back to you within one business day.";
+                } else {
+                  status.textContent = "Something went wrong. Please email us directly instead.";
+                }
+                status.style.display = 'block';
+              }).catch(function(){
+                status.textContent = "Something went wrong. Please email us directly instead.";
+                status.style.display = 'block';
+              });
+            });
+          })();
+        </script>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>© 2026 Klyna Engineering and Trading Private Limited. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
